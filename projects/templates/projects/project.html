@@ -1,0 +1,75 @@
+{% extends "my_site/base.html" %}
+{% load static %}
+
+{% block title %}Projects{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'projects/project.css' %}" />
+{% endblock css %}
+
+{% block body %}
+
+<section id="projects" class="projects-section">
+    <h3 class="section-heading" data-aos="fade-down">Projects</h3>
+    <div class="projects-grid">
+      <!-- Card -->
+      <div class="project-card" data-id="neuro" data-aos="fade-up">
+        <img src="Templates/Mango.png" alt="NeuroVision AI" />
+        <h3>NeuroVision AI</h3>
+      </div>
+
+      
+      <div class="project-card" data-id="neuro" data-aos="fade-up">
+        <img src="Templates/Mango.png" alt="NeuroVision AI" />
+        <h3>NeuroVision AI</h3>
+      </div>
+  
+      <div class="project-card" data-id="codemap" data-aos="fade-up">
+        <img src="Templates/landingpage.jpg" alt="CodeMap" />
+        <h3>CodeMap</h3>
+      </div>
+  
+      <div class="project-card" data-id="citegen" data-aos="fade-up">
+        <img src="Templates/landingpage.jpg" alt="CiteGen" />
+        <h3>CiteGen</h3>
+      </div>
+  
+      <div class="project-card" data-id="pixelcraft" data-aos="fade-up">
+        <img src="assets/projects/pixelcraft.png" alt="PixelCraft" />
+        <h3>PixelCraft Studio</h3>
+      </div>
+  
+      <div class="project-card" data-id="mlassist" data-aos="fade-up">
+        <img src="assets/projects/mlassist.png" alt="MLAssist" />
+        <h3>MLAssist Bot</h3>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="projectModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="Project Screenshot" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-links">
+        <a href="#" id="modalGitHub" target="_blank">GitHub</a>
+        <a href="#" id="modalDemo" target="_blank">Live Demo</a>
+        <a href="#" id="modalPaper" class="hidden" target="_blank">Reaserch Article</a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="reviewModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-review-modal">&times;</span>
+      <h2>Under Review 🕓</h2>
+      <p>This research paper is currently under peer review and will be made available soon.</p>
+    </div>
+  </div>
+{% endblock body %}
+
+{% block js %}
+<script src="{% static 'projects/project.js' %}"></script>
+{% endblock js %}

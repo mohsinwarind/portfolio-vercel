@@ -1,0 +1,25 @@
+{% extends "my_site/base.html" %}
+{% load static %}
+{% block title %}Blogs{% endblock title %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'blog/blog_detail.css' %}">
+{% endblock css %}
+
+
+{% block body %}
+
+<article class="blog-post">
+    <h1>{{ title }}</h1>
+    <p class="post-date">{{ date }}</p>
+  
+    {% if image %}
+      <img src="{% static image %}" alt="{{ title }}" class="blog-header-image" />
+    {% endif %}
+  
+    <div class="post-content">
+      {{ content|safe }}
+    </div>
+  </article>
+  
+
+{% endblock body %}

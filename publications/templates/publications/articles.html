@@ -1,0 +1,49 @@
+{% extends "my_site/base.html" %}
+{% load static %}
+{% block title %}Publications{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'publications/articles.css' %}" />
+{% endblock css %}
+
+{% block body %}
+
+<section class="pub-section" id="publications">
+    <h2 class="pub-heading" >Publications Timeline</h2>
+  
+    <div class="pub-timeline">
+  
+      <div class="pub-item left" data-aos="fade-up">
+        <div class="pub-marker"></div>
+        <div class="pub-card">
+          <h3 class="pub-title">Mango Fusion</h3>
+          <p class="pub-desc">A novel hybrid model for dense sparse data fusion.</p>
+          <p class="pub-meta">Published in ICML • Mar 2024</p>
+          <a href="#" class="pub-btn">View Paper</a>
+        </div>
+      </div>
+  
+      <div class="pub-item right" data-aos="fade-up">
+        <div class="pub-marker"></div>
+        <div class="pub-card">
+          <h3 class="pub-title">Prostate Cancer Detection</h3>
+          <p class="pub-desc">Early diagnosis using multimodal MRI fusion and CNNs.</p>
+          <p class="pub-meta">Published in Nature Medicine • Dec 2023</p>
+          <!-- <a href="#" class="pub-btn">View Paper</a> -->
+        </div>
+      </div>
+  
+      <div class="pub-item left" data-aos="fade-up">
+        <div class="pub-marker"></div>
+        <div class="pub-card">
+          <h3 class="pub-title">Osteosarcoma Classifier</h3>
+          <p class="pub-desc">Deep-learning CNN for pathology stages.</p>
+          <p class="pub-meta">Elsevier BioMed • Aug 2022</p>
+          <a href="#" class="pub-btn">View Paper</a>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+{% endblock body %}
