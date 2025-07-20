@@ -416,6 +416,12 @@
   .tech-icons img {
     height: 36px;
   }
+  .work-heading{
+    font-size: 1rem;
+  }
+  .work-subtitle {
+    font-size: 0.9rem;
+  }
 }
 
 /* Even smaller screens */
@@ -435,6 +441,7 @@
   .highlight-card {
     padding: 1rem;
   }
+  
 
   .tech-icons {
     gap: 8px;

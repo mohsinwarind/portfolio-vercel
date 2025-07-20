@@ -31,6 +31,7 @@
     filter: grayscale(100%);
     transition: filter 0.3s ease, transform 0.3s ease;
     box-shadow: none; /* remove shadow */
+    
   }
   
   .profile-image:hover {
@@ -51,6 +52,7 @@
   .about-description {
     font-size: 1rem;
     line-height: 1.6;
+    text-align: justify;
   }
   
   /* Buttons outside the container */
@@ -129,6 +131,12 @@
   
     .image-wrapper {
       width: 220px;
+    }
+    .about-heading{
+      font-size: 1.5rem;
+    }
+    .about-description {
+      font-size: 0.9rem;
     }
   }
   
