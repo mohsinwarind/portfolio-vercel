@@ -126,8 +126,8 @@
   @media (max-width: 768px) {
     .about-me-container {
       flex-direction: column;
-      text-align: center;
-      padding: 1.5rem;
+      text-align: justify;
+      padding: 2.5rem;
       gap: 2rem;
     }
   

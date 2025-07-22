@@ -1,118 +1,138 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
+  // 📌 Modal DOM elements
+  const modal = document.getElementById('projectModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalImage = document.getElementById('modalImage');
+  const modalDesc = document.getElementById('modalDescription');
+  const modalGitHub = document.getElementById('modalGitHub');
+  const modalDemo = document.getElementById('modalDemo');
+  const modalPaper = document.getElementById('modalPaper');
+  const closeModal = document.querySelector('.close-modal');
 
+  // 📌 Review modal
+  const reviewModal = document.getElementById('reviewModal');
+  const closeReviewModal = document.querySelector('.close-review-modal');
 
-    // 📌 Modal DOM elements
-const modal = document.getElementById('projectModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalImage = document.getElementById('modalImage');
-const modalDesc = document.getElementById('modalDescription');
-const modalGitHub = document.getElementById('modalGitHub');
-const modalDemo = document.getElementById('modalDemo');
-const modalPaper = document.getElementById('modalPaper');
-const closeModal = document.querySelector('.close-modal');
+  // 📌 Project cards and data
+  const projects = {
+    Fusion: {
+      title: "Mango Disease Classifier",
+      desc: "A Machine Learning app that classifies mango diseases using pre-trained CNN individual models, along with a novel dynamic attention-based fusion model that integrates the predictions of both leaf and fruit models to improve generalization.",
+      img: STATIC_URL + "projects/images/Fusion.png",
+      github: "https://github.com/mohsinwarind/Mango_Fusion",
+      demo: "https://mango-fusion-brown.vercel.app/",
+      paper: "under-review"
+    },
+    Bidraze: {
+      title: "Bidraze",
+      desc: "Bidraze is a feature-rich online auction platform built with Python and Django. It allows users to create listings, place bids, track items via a watchlist, and manage auctions in a user-friendly interface.",
+      img: STATIC_URL + "projects/images/BidRaze.png",
+      github: "https://github.com/mohsinwarind/Bidraze",
+      demo: "https://bidraze.onrender.com/",
+      // paper: "under-review"
+    },
+    Conectify: {
+      title: "Conectify",
+      desc: "Conectify is a Django-based social media platform that allows users to create, share, and interact with posts. It supports user authentication, profile customization, image uploads, follow systems, and more.",
+      img: STATIC_URL + "projects/images/connect.png",
+      github: "https://github.com/mohsinwarind/Conectify",
+      demo: "https://conectify.onrender.com/",
+      // paper: "under-review"
+    },
+    sapiens: {
+      title: "The Wise Sapiens",
+      desc: "A multi-pages static website I designed for my own organization",
+      img: STATIC_URL + "projects/images/wisesapiens.png",
+      github: "https://github.com/mohsinwarind/TheWiseSapiens",
+      demo: "https://thewisesapiens.org/"
+    },
+    codequest1: {
+      title: "Code Conquest I",
+      desc: "A website which I designed for our very first hackthon..",
+      img: STATIC_URL + "projects/images/Hakathon.png",
+      github: "https://github.com/mohsinwarind/Code-Conquest-I/",
+      demo: "https://mohsinwarind.github.io/Code-Conquest-I/",
+      // paper: "https://arxiv.org/abs/xyz123"
+    },
+    mall: {
+      title: "Virtual Mall System",
+      desc: "Virtual Mall System is an interactive C++ project...",
+      img: STATIC_URL + "projects/images/Mall.png",
+      github: "https://github.com/mohsinwarind/Virtual-Mall-",
+      
+      // demo and paper are optional/missing
+    },
+    // more projects...
+  };
 
-// 📌 Review modal
-const reviewModal = document.getElementById('reviewModal');
-const closeReviewModal = document.querySelector('.close-review-modal');
+  // 📌 Event handler for each project card
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const id = card.getAttribute('data-id');
+      const data = projects[id];
 
-// 📌 Project cards and data
-const projects = {
-  neuro: {
-    title: "NeuroVision AI",
-    desc: "AI-powered brain tumor detection system built with TensorFlow and Flask...",
-    img: "Templates/landingpage.jpg",
-    github: "https://github.com/yourrepo/neurovision",
-    demo: "https://neurovision-demo.vercel.app",
-    paper: "under-review"
-  },
-  codemap: {
-    title: "CodeMap",
-    desc: "Real-time task dashboard...",
-    img: "assets/projects/codemap.png",
-    github: "https://github.com/yourrepo/codemap",
-    demo: "https://codemap.io"
-  },
-  citegen: {
-    title: "CiteGen",
-    desc: "Citation extractor...",
-    img: "a",
-    github: "https://github.com/yourrepo/citegen",
-    demo: "https://citegen.org",
-    paper: "https://arxiv.org/abs/xyz123"
-  },
-  mall: {
-    title: "Virtual Mall System",
-    desc: "Virtual Mall System is a interactive C++ project for first-semester students, simulating a virtual shopping experience with category exploration and real-time purchase tracking.",
-    img: STATIC_URL + "projects/images/Mall.png",
-    github: "https://github.com/mohsinwarind/Virtual-Mall-",
-    // demo: "https://citegen.org",
-    // paper: "https://arxiv.org/abs/xyz123"
-  },
+      modalTitle.textContent = data.title;
+      modalImage.src = data.img;
+      modalDesc.textContent = data.desc;
+      modalGitHub.href = data.github;
 
+      // 📌 Handle Live Demo logic
+      if (data.demo) {
+        modalDemo.href = data.demo;
+        modalDemo.classList.remove('hidden');
+        modalDemo.style.display = 'inline-block';
+      } else {
+        modalDemo.removeAttribute('href');
+        modalDemo.classList.add('hidden');
+        modalDemo.style.display = 'none';
+      }
 
-  // etc...
-};
+      // 📌 Handle Research Article logic
+      if (data.paper && data.paper !== "under-review") {
+        modalPaper.href = data.paper;
+        modalPaper.classList.remove('hidden');
+        modalPaper.onclick = null;
+      } else if (data.paper === "under-review") {
+        modalPaper.classList.remove('hidden');
+        modalPaper.removeAttribute('href');
+        modalPaper.onclick = function (e) {
+          e.preventDefault();
+          reviewModal.classList.remove('hidden');
+        };
+      } else {
+        modalPaper.classList.add('hidden');
+        modalPaper.removeAttribute('href');
+        modalPaper.onclick = null;
+      }
 
+      modal.classList.remove('hidden');
+    });
+  });
 
-// 📌 Single event handler for all project cards
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const id = card.getAttribute('data-id');
-    const data = projects[id];
+  // 📌 Modal close logic
+  closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+  window.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.add('hidden');
+  });
 
-    modalTitle.textContent = data.title;
-    modalImage.src = data.img;
-    modalDesc.textContent = data.desc;
-    modalGitHub.href = data.github;
-    modalDemo.href = data.demo;
+  // 📌 Review modal close logic
+  closeReviewModal.addEventListener('click', () => reviewModal.classList.add('hidden'));
+  window.addEventListener('click', (e) => {
+    if (e.target === reviewModal) reviewModal.classList.add('hidden');
+  });
 
-    // 🧠 Handle Research Article logic
-    if (data.paper && data.paper !== "under-review") {
-      modalPaper.href = data.paper;
-      modalPaper.classList.remove('hidden');
-      modalPaper.onclick = null;
-    } else if (data.paper === "under-review") {
-      modalPaper.classList.remove('hidden');
-      modalPaper.removeAttribute('href');
-      modalPaper.onclick = function (e) {
-        e.preventDefault();
-        reviewModal.classList.remove('hidden');
-      };
-    } else {
-      modalPaper.classList.add('hidden');
-      modalPaper.removeAttribute('href');
-      modalPaper.onclick = null;
-    }
+  // 📌 3D Card Animation on Hover
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const { offsetX, offsetY } = e;
+      const { offsetWidth: w, offsetHeight: h } = card;
+      const rotateX = ((offsetY / h) - 0.5) * 10;
+      const rotateY = ((offsetX / w) - 0.5) * -10;
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    });
 
-    modal.classList.remove('hidden');
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
   });
 });
-
-// 📌 Modal close logic
-closeModal.addEventListener('click', () => modal.classList.add('hidden'));
-window.addEventListener('click', e => {
-  if (e.target === modal) modal.classList.add('hidden');
-});
-
-// 📌 Review modal close logic
-closeReviewModal.addEventListener('click', () => reviewModal.classList.add('hidden'));
-window.addEventListener('click', (e) => {
-  if (e.target === reviewModal) reviewModal.classList.add('hidden');
-});
-
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const { offsetX, offsetY } = e;
-    const { offsetWidth: w, offsetHeight: h } = card;
-    const rotateX = ((offsetY / h) - 0.5) * 10;
-    const rotateY = ((offsetX / w) - 0.5) * -10;
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-  });
-
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
-  });
-});
-
-
-})
