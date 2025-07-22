@@ -127,6 +127,8 @@
     .about-me-container {
       flex-direction: column;
       text-align: center;
+      padding: 1.5rem;
+      gap: 2rem;
     }
   
     .about-buttons {
