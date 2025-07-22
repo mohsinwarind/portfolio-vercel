@@ -16,10 +16,10 @@
       </div>
       <div class="terminal-body">
         <div class="terminal-text" id="terminalText"></div>
-        <div class="terminal-photo">
-            <img src="{% static 'about/Mohsin.png' %}" alt="Mohsin" class="photo" />
+        {% comment %} <div class="terminal-photo">
+            <img src="{% static 'about/terminal.png' %}" alt="Mohsin" class="photo" />
           <!-- You'll add photo manually, e.g., <img src="assets/photo.jpg"> -->
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
   </section>
@@ -35,7 +35,7 @@
   
       <div class="card-grid">
         <!-- ✅ Projects Card -->
-        <a href="/projects" class="work-card" data-aos="fade-up" data-aos-delay="100">
+        <a href="{% url "projects" %}" class="work-card" data-aos="fade-up" data-aos-delay="100">
           <div class="card-icon"  >
             <!-- Code/Project SVG -->
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -49,7 +49,7 @@
         </a>
   
         <!-- ✅ Publications Card -->
-        <a href="/publications" class="work-card" data-aos="fade-up" data-aos-delay="200">
+        <a href="{% url "publications" %}" class="work-card" data-aos="fade-up" data-aos-delay="200">
           <div class="card-icon">
             <!-- Document/Research SVG -->
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -65,7 +65,7 @@
         </a>
   
         <!-- ✅ Extra-Curricular Card -->
-        <a href="/extra" class="work-card" data-aos="fade-up" data-aos-delay="300">
+        <a href="{% url "about" %}" class="work-card" data-aos="fade-up" data-aos-delay="300">
           <div class="card-icon">
             <!-- Community/Globe SVG -->
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ffc3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

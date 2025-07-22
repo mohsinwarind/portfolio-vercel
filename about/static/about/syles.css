@@ -1,5 +1,6 @@
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sassy+Frass&display=swap');
 
 
 * {
@@ -206,8 +207,8 @@
   }
   
   .footer-name {
-    font-size: 1.7rem;
-    font-family: "Allura", cursive;
+    font-size: 3rem;
+    font-family: "Sassy Frass", cursive;
     font-weight: bold;
     color: var(--accent);
   }
@@ -297,10 +298,34 @@
     .footer-center {
       order: 1;
     }
-  
+    
     .footer-left,
     .footer-right {
       width: 25%;
     }
   }
-  
+  @media (max-width: 600px) {
+    .footer-email-box .mail-icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+/* ::selection {
+  background-color: rgba(255, 229, 100, 0.7); 
+  color: #1a1a1a; 
+} */
+
+/* Default (dark theme) selection */
+/* Dark theme */
+::selection {
+  background-color: rgba(0, 255, 153, 0.377);  /* soft green */
+  color: #ffffff;
+  text-shadow: 0 0 2px rgba(0, 255, 153, 0.3); /* glow effect */
+}
+
+/* Light theme */
+body.light ::selection {
+  background-color: rgba(0, 122, 204, 0.493);  /* soft blue */
+  color: #111;
+  text-shadow: 0 0 1px rgba(0, 122, 204, 0.2); /* subtle text glow */
+}

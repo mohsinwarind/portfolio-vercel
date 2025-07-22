@@ -3,7 +3,9 @@ title: "Mohsin Ramzan"
 slug: "second-blog"
 date: "2025-07-14"
 description: "This is a sample post written in markdown."
-image: "about/Mohsin.png"
+# image: "about/Mohsin.png"
+image: "blog/images/Blog1.jpg" 
+
 ---
 
 # Hello World 👋

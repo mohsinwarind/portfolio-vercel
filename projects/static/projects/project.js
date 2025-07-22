@@ -35,13 +35,24 @@ const projects = {
   citegen: {
     title: "CiteGen",
     desc: "Citation extractor...",
-    img: "assets/projects/citegen.png",
+    img: "a",
     github: "https://github.com/yourrepo/citegen",
     demo: "https://citegen.org",
     paper: "https://arxiv.org/abs/xyz123"
   },
+  mall: {
+    title: "Virtual Mall System",
+    desc: "Virtual Mall System is a interactive C++ project for first-semester students, simulating a virtual shopping experience with category exploration and real-time purchase tracking.",
+    img: STATIC_URL + "projects/images/Mall.png",
+    github: "https://github.com/mohsinwarind/Virtual-Mall-",
+    // demo: "https://citegen.org",
+    // paper: "https://arxiv.org/abs/xyz123"
+  },
+
+
   // etc...
 };
+
 
 // 📌 Single event handler for all project cards
 document.querySelectorAll('.project-card').forEach(card => {

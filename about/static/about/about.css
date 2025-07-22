@@ -5,7 +5,11 @@
     /* background: var(--bg, #0e0e0e); */
     color: var(--text, #eee);
   }
-  
+  .name{
+    font-family: "Caveat";
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
   .about-me-container {
     background: var(--bg, #0e0e0e94);
     display: flex;

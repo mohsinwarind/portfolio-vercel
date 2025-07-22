@@ -39,9 +39,9 @@
         <h3>PixelCraft Studio</h3>
       </div>
   
-      <div class="project-card" data-id="mlassist" data-aos="fade-up">
-        <img src="assets/projects/mlassist.png" alt="MLAssist" />
-        <h3>MLAssist Bot</h3>
+      <div class="project-card" data-id="mall" data-aos="fade-up">
+        <img src="{% static 'projects/images/Mall.png' %}" alt="MLAssist" />
+        <h3>Virtual Mall System</h3>
       </div>
     </div>
   </section>
@@ -71,5 +71,9 @@
 {% endblock body %}
 
 {% block js %}
+<script>
+  const STATIC_URL = "{% static '' %}";
+</script>
+
 <script src="{% static 'projects/project.js' %}"></script>
 {% endblock js %}
