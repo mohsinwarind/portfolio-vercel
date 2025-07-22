@@ -127,7 +127,7 @@
     .about-me-container {
       flex-direction: column;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
       gap: 2rem;
     }
   
