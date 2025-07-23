@@ -16,3 +16,7 @@ def home(request):
 
 def about(request):
     return render (request, "about/about.html")
+
+
+def  extra(request):
+    return render(request , "about/extra.html")

@@ -1,0 +1,66 @@
+{% extends "about/base.html" %}
+{% load static %}
+{% block title %}Extra-Curriculars{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'about/extra.css' %}">
+{% endblock css %}
+
+{% block body %}
+<section class="extracurricular-section" id="extracurricular">
+    <h2>Extra-Curricular Activities</h2>
+  
+    <div class="activity-list">
+  
+      <div class="activity-card">
+        <h3>🎤 TEDx Volunteer</h3>
+        <p>Assisted with event logistics and guest coordination during TEDxYouth @YourCity.</p>
+        <a href="https://www.ted.com/tedx" target="_blank">View Event</a>
+      </div>
+  
+      <div class="activity-card">
+        <h3>💻 Google DSC Core Team</h3>
+        <p>Organized workshops and mentored peers in Python and Open Source contributions.</p>
+        <a href="https://gdsc.community.dev/" target="_blank">Learn More</a>
+      </div>
+  
+      <div class="activity-card">
+        <h3>🧠 Hackathon Finalist - Hack@Home</h3>
+        <p>Built a mental health chatbot using NLP in a 36-hour national hackathon.</p>
+      </div>
+  
+      <!-- Add more activities here -->
+    </div>
+  </section>
+  
+  
+  <section class="certificates-section" id="certificates">
+    <h2>Certificates</h2>
+  
+    <div class="certificates-grid">
+  
+      <a class="cert-card" href="https://pll.harvard.edu/course/cs50s-web-programming-python-and-javascript" target="_blank">
+        <div class="cert-content">
+          <h3>📘 Harvard CS50 Web</h3>
+          <p>Backend with Django, SQL, Git, and JavaScript fundamentals.</p>
+        </div>
+      </a>
+  
+      <a class="cert-card" href="https://example.com/google-ai-ml-cert" target="_blank">
+        <div class="cert-content">
+          <h3>🤖 Google AI/ML</h3>
+          <p>ML theory, TensorFlow, and production pipelines.</p>
+        </div>
+      </a>
+  
+      <a class="cert-card" href="https://example.com/cisco-cybersecurity" target="_blank">
+        <div class="cert-content">
+          <h3>🔐 Cisco Cybersecurity</h3>
+          <p>Cyber threats, firewalls, and network security principles.</p>
+        </div>
+      </a>
+  
+    </div>
+  </section>
+  
+  
+{% endblock body %}
