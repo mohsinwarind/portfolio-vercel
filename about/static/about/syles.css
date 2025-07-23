@@ -91,6 +91,8 @@
     }
     .logo{
       font-size: 1.5rem;
+     
+      
     }
     .nav-links.active {
       display: flex;
@@ -308,6 +310,9 @@
     .footer-email-box .mail-icon {
       width: 14px;
       height: 14px;
+    }
+    .footer-name{
+      font-size: 3rem;
     }
   }
 /* ::selection {
