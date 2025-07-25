@@ -6,14 +6,15 @@
 {% endblock css %}
 
 {% block body %}
+
 <section class="about-me-section">
+  <div class="about-flex-wrapper">
+    <div class="image-wrapper">
+      <img src="{% static 'about/Mohsin.png' %}" class="profile-image" alt="Profile Image">
+    </div>
     <div class="about-me-container">
-      <div class="image-wrapper">
-        <img src="{% static 'about/Me.png' %}" class="profile-image" alt="Profile Image">
-      </div>
       <div class="about-text">
         <h2 class="about-heading">Hi, I’m <span class="name">Mohsin</span></h2>
-
         <p class="about-description">
           an ordinary boy from Earth striving to escape the absurdity and to find
            purpose for his existence in the mundane. My story begins from the 
@@ -44,15 +45,18 @@ that we come to terms with this perturbed and redoubling Frankenstein
 monster.
 
         
-        </p>
-      </div>
-    </div>
-  
-    <!-- Buttons outside the bordered container -->
-    <div class="about-buttons">
-      <a href="{% static 'docs/your_cv.pdf' %}" class="btn btn-primary" download>📄 Download CV</a>
-      <a href="mailto:mohsinramzan999@gmail.com" class="btn btn-secondary">✉️ Contact Me</a>
-    </div>
-  </section>
+</p>
+</div>
+<div class="about-buttons">
+  <a href="{% static 'docs/your_cv.pdf' %}" class="btn btn-primary" download>📄 Download CV</a>
+  <a href="mailto:mohsinramzan999@gmail.com" class="btn btn-secondary">✉️ Contact Me</a>
+  </div>
+</div>
+
+</div>
+
+<!-- Buttons -->
+
+</section>
   
 {% endblock body %}
