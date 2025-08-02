@@ -41,7 +41,7 @@
   
   .profile-image:hover {
     filter: grayscale(0%);
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
   
   .about-me-container {
