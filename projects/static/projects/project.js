@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
       demo: "https://mango-fusion-brown.vercel.app/",
       paper: "under-review"
     },
+    Bus: {
+      title: "KFUEIT Bus System",
+      desc: "A digitialize bus system for KFUEIT, which let the student see their bus routes, manage them, find there lost items , list the item they found, and to trace the live location of buses.",
+      img: STATIC_URL + "projects/images/Bus.png",
+      github: "https://github.com/mohsinwarind/KFUEIT-Bus-System",
+      demo: "https://kfueit-bus-system.onrender.com"
+    },
     Bidraze: {
       title: "Bidraze",
       desc: "Bidraze is a feature-rich online auction platform built with Python and Django. It allows users to create listings, place bids, track items via a watchlist, and manage auctions in a user-friendly interface.",
