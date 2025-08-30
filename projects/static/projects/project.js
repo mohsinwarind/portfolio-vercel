@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
       demo: "https://mango-fusion-brown.vercel.app/",
       paper: "under-review"
     },
+    GPT: {
+      title: "CogitoGPT",
+      desc: "CogitoGPT is an AI-powered reaserch-oriented chatbot application that utilize Mistral-7B-Instruct-v0.3 model to provide intelligent, relevant, concise and context-aware summariziation and answer of user queries in real-time on reaserch articles.",
+      img: STATIC_URL + "projects/images/GPT.png",
+      github: "https://github.com/mohsinwarind/CogitoGPT",
+      demo: "https://cogitogpt.vercel.app/"
+    },
     Bus: {
       title: "KFUEIT Bus System",
       desc: "A digitialize bus system for KFUEIT, which let the student see their bus routes, manage them, find there lost items , list the item they found, and to trace the live location of buses.",
@@ -45,6 +52,13 @@ document.addEventListener("DOMContentLoaded", function () {
       github: "https://github.com/mohsinwarind/Conectify",
       demo: "https://conectify.onrender.com/",
       // paper: "under-review"
+    },
+    MBox: {
+      title: "MBox",
+      desc: "MBox is a dynamic, single-page mail application built using Django for the backend and JavaScript (ES6) for frontend interactivity. Inspired by Gmail, this project demonstrates how to implement core email functionalities in a full-stack web environment.",
+      img: STATIC_URL + "projects/images/MBox.png",
+      github: "https://github.com/mohsinwarind/MBox",
+      demo: "https://mbox-z3f9.onrender.com/"
     },
     sapiens: {
       title: "The Wise Sapiens",
