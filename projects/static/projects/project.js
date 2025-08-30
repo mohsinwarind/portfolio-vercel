@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     GPT: {
       title: "CogitoGPT",
-      desc: "CogitoGPT is an AI-powered reaserch-oriented chatbot application that utilize Mistral-7B-Instruct-v0.3 model to provide intelligent, relevant, concise and context-aware summariziation and answer of user queries in real-time on reaserch articles.",
+      desc: "CogitoGPT is an AI-powered research-oriented chatbot application that utilize Mistral-7B-Instruct-v0.3 model to provide intelligent, relevant, concise and context-aware summarization and answer of user queries in real-time on research articles.",
       img: STATIC_URL + "projects/images/GPT.png",
       github: "https://github.com/mohsinwarind/CogitoGPT",
       demo: "https://cogitogpt.vercel.app/"
