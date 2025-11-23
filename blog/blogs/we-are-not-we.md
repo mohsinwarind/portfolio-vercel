@@ -2,7 +2,7 @@
 title: "We are Not We !"
 slug: "we-are-not-we"
 date: "2025-11-23"
-description: "This is a sample post written in markdown."
+description: "A quest to find the true essense of our existence"
 # image: "about/Mohsin.png"
 image: "blog/images/freewill.jpg" 
 
