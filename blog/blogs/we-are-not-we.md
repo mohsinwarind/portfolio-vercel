@@ -3,10 +3,10 @@ title: "We are Not We !"
 slug: "we-are-not-we"
 date: "2025-11-23"
 description: "A quest to find the true essense of our existence"
-# image: "about/Mohsin.png"
 image: "blog/images/freewill.jpg" 
 
 ---
+November 23, 2025
 
 In the contemporary epoch, the best escape from the absurdity of our existence is to be found in individuality, which is derived from free will. But do we humans actually possess free will? Or do we even have the conscious self to truly contemplate the mere meaning of our existence?
 
@@ -19,3 +19,4 @@ So, apparently, we can never escape this influence because biologically these th
 
 So, all of this introspection was not meant to put you into any more quagmire of existential crisis but to make you more humble and empathetic. Nothing here is absolute, maybe the arguments I’m trying to yap about are mere abstractions of my mind  but why should we care? We are here for an ephemeral period so we simply should live through it with peace and civility.
 
+~ Mohsin 
