@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       img: STATIC_URL + "projects/images/Fusion.png",
       github: "https://github.com/mohsinwarind/Mango_Fusion",
       demo: "https://mango-fusion-brown.vercel.app/",
-      paper: "under-review"
+      paper: "https://rdcu.be/eRTRy"
     },
     GPT: {
       title: "CogitoGPT",
