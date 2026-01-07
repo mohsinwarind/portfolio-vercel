@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 📌 Modal DOM elements
+  //  Modal DOM elements
   const modal = document.getElementById('projectModal');
   const modalTitle = document.getElementById('modalTitle');
   const modalImage = document.getElementById('modalImage');
@@ -9,12 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalPaper = document.getElementById('modalPaper');
   const closeModal = document.querySelector('.close-modal');
 
-  // 📌 Review modal
+  //  Review modal
   const reviewModal = document.getElementById('reviewModal');
   const closeReviewModal = document.querySelector('.close-review-modal');
 
-  // 📌 Project cards and data
+  //  Project cards and data
   const projects = {
+    IDM: {
+      title: "Multi-Thread Download Manager",
+      desc: "A Desktop application to download any internet file in chunks using Multi-Threading and Tkinter for GUI.",
+      img: STATIC_URL + "projects/images/IDM.png",
+      github: "https://github.com/mohsinwarind/MultiThread_Downloader.git",
+      
+    },
+
     Fusion: {
       title: "Mango Disease Classifier",
       desc: "A Machine Learning app that classifies mango diseases using pre-trained CNN individual models, along with a novel dynamic attention-based fusion model that integrates the predictions of both leaf and fruit models to improve generalization.",
@@ -86,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // more projects...
   };
 
-  // 📌 Event handler for each project card
+  //  Event handler for each project card
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
       const id = card.getAttribute('data-id');
@@ -97,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalDesc.textContent = data.desc;
       modalGitHub.href = data.github;
 
-      // 📌 Handle Live Demo logic
+      //  Handle Live Demo logic
       if (data.demo) {
         modalDemo.href = data.demo;
         modalDemo.classList.remove('hidden');
@@ -108,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modalDemo.style.display = 'none';
       }
 
-      // 📌 Handle Research Article logic
+      //  Handle Research Article logic
       if (data.paper && data.paper !== "under-review") {
         modalPaper.href = data.paper;
         modalPaper.classList.remove('hidden');
@@ -130,19 +138,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 📌 Modal close logic
+  //  Modal close logic
   closeModal.addEventListener('click', () => modal.classList.add('hidden'));
   window.addEventListener('click', e => {
     if (e.target === modal) modal.classList.add('hidden');
   });
 
-  // 📌 Review modal close logic
+  //  Review modal close logic
   closeReviewModal.addEventListener('click', () => reviewModal.classList.add('hidden'));
   window.addEventListener('click', (e) => {
     if (e.target === reviewModal) reviewModal.classList.add('hidden');
   });
 
-  // 📌 3D Card Animation on Hover
+  //  3D Card Animation on Hover
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const { offsetX, offsetY } = e;
