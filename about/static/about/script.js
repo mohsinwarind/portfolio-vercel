@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleGitHubTheme(theme) {
       const statsImg = document.getElementById("github-stats-img");
       if (statsImg) {
-        statsImg.src = `https://github-readme-stats.vercel.app/api?username=mohsinwarind&show_icons=true&theme=${theme}`;
+        // statsImg.src = `https://github-readme-stats.vercel.app/api?username=mohsinwarind&show_icons=true&theme=${theme}`;
+        statsImg.src = `https://streak-stats.demolab.com/?user=mohsinwarind&theme=${theme}`;
+
       }
     }
   });
