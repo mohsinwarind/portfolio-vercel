@@ -1,0 +1,172 @@
+body{
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%235e5e5e' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+    
+}
+
+
+.extracurricular-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .extracurricular-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text);
+  }
+  
+  .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .activity-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+    cursor: pointer;
+    background:  rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+  }
+  
+  .activity-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .activity-card h3 {
+    margin: 0 0 0.6rem;
+    color: var(--text);
+    font-size: 1.2rem;
+  }
+  
+  .activity-card p {
+    margin: 0 0 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  
+  .activity-card a {
+    display: inline-block;
+    background-color: rgba(0, 255, 204, 0.418);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .activity-card a:hover {
+    background-color:  rgb(0, 87, 66);
+    /* background-color: #2e6be6;  */
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  body.light .activity-card a {
+    background-color: #007acc;
+    color: white;
+  }
+  body.light .activity-card a:hover {
+    background-color: #005c99;
+  }
+  
+  /* 🧾 Certificate Card Styling */
+  .certificates-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .certificates-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text);
+    text-align: center;
+  }
+  
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 600px) {
+    .certificates-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+  }
+  @media (max-width : 600px){
+    .extracurricular-section h2{
+      font-size: 1.5rem;
+    }
+    .certificates-section h2{
+      font-size: 1.5rem;
+    }
+  }
+  .cert-card {
+    background:  rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2px);
+    display: block;
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.1);
+    cursor: pointer;
+    color: var(--text);
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+  }
+  body.light .cert-card,
+  body.light .activity-card{
+    backdrop-filter: blur(4px);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+  }
+  
+  .cert-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 60%);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .cert-card:hover::before {
+    opacity: 1;
+  }
+  
+  .cert-content h3 {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .cert-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  
