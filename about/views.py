@@ -20,3 +20,8 @@ def about(request):
 
 def  extra(request):
     return render(request , "about/extra.html")
+
+
+def custom_404_view(request, exception):
+    return render(request, "about/404.html", status=404)
+
