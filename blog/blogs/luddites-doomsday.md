@@ -1,7 +1,7 @@
 ---
 title: "Luddites Doomsday"
 slug: "luddites-doomsday"
-date: "2025-19-12"
+date: "2026-02-20"
 description: "Homo Sapiens are on the path of self-destrcution"
 # image: "about/Mohsin.png"
 image: "blog/images/AI.jpg" 
