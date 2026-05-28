@@ -57,23 +57,30 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   
-    // Count-up Animation
-    const counters = document.querySelectorAll('.count');
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText;
-        const increment = Math.ceil(target / 100);
-  
-        if (count < target) {
-          counter.innerText = count + increment;
-          setTimeout(updateCount, 30);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
+   // Count-up Animation
+const counters = document.querySelectorAll('.count');
+
+counters.forEach(counter => {
+
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix') || '';
+
+    // Remove suffix before converting to number
+    const current = parseInt(counter.innerText);
+
+    const increment = Math.ceil(target / 100);
+
+    if (current < target) {
+      counter.innerText = `${current + increment}${suffix}`;
+      setTimeout(updateCount, 100);
+    } else {
+      counter.innerText = `${target}${suffix}`;
+    }
+  };
+
+  updateCount();
+});
   
     function toggleGitHubTheme(theme) {
       const statsImg = document.getElementById("github-stats-img");
