@@ -15,6 +15,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //  Project cards and data
   const projects = {
+    
+    ABC: {
+      title: "Arabic Audio Classifier",
+      desc: "A Deep Learning based Arabic Audio classifier which implement cross-attention based fusion.",
+      img: STATIC_URL + "projects/images/ABC.jpeg",
+      github: "https://github.com/mohsinwarind/Arabic-Audio-Classifier",
+      
+    },
+    MDIPS: {
+      title: "MDIPS",
+      desc: "A MultiTask Neural Network Based Disaster Impact prediction System.",
+      img: STATIC_URL + "projects/images/MDIPS.png",
+      github: "https://github.com/mohsinwarind/MDIPS",
+      
+    },
     IDM: {
       title: "Multi-Thread Download Manager",
       desc: "A Desktop application to download any internet file in chunks using Multi-Threading and Tkinter for GUI.",
