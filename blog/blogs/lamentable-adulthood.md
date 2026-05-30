@@ -25,3 +25,5 @@ Maybe I can just blame this full moon for all this nostalgic trauma because just
 
 
 ~ Mohsin
+
+edited: being an observer, everything around us triggers nostalgia, so it's okay. Life is heavenly and it always will be, as long as your emotional stability isn't dependent on anyone else and you have a regulated nervous system. This life is all we have, guys, and we have to live it through with love and joy, not with pessimism or mourning. Please be rooted and entrenched in humanity and yourself so that you take every blow as a source of lesson and stick to the realistic pathway for the greater good, as taught to us by the philosophy of Immanuel Kant in utilitarianism.
