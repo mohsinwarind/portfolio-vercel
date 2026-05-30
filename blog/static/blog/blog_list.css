@@ -93,8 +93,8 @@ body.light {
   /* Image */
   .blog-card img {
     width: 100%;
-    height: 200px; /* Or 200px if you prefer slightly taller cards */
-    object-fit: cover; /* This will crop and scale the image to fill */
+    height: 300px; 
+     object-fit: cover; /*This will crop and scale the image to fill */
     display: block;
   }
   

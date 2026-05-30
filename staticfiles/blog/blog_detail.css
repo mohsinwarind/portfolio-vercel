@@ -59,12 +59,14 @@
   }
   
   .post-content a {
+    display: inline-block;
     color: #00ffcc;
     text-decoration: underline;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
   .post-content a:hover {
     color: #00ffaa;
+    transform: translateY(-1px);
   }
   
   /* Code blocks */
@@ -131,6 +133,7 @@
   
   body.light .post-content a {
     color: #007acc;
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   }
   body.light .post-content a:hover {
     color: #005fa3;
