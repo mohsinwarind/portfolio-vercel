@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Terminal typing effect...
     // const text = `> Hello, I'm Mohsin learning new things, doing new stuff and helping no one , lol, right now i'm testing this terminal that how is it supporsed to work or behvave here\n> 🧠 Full Stack Web Developer\n> 🤖 AI Researcher | 📚 Author\n> 🌍 Founder - AI for Society\n\n> Crafting solutions in code and community.`;
-    const text = `> Hello, I'm Mohsin, a third-year Computer Science undergraduate student. \n> A Harvard-Certified Full Stack Web App Developer with Python and Django. \n> Currently immersed in writing research articles and developing applications in the realm of Artificial Intelligence and Machine Learning. \n> Founder of 'The Wise Sapiens' , a non-profit dedicated to STEM education and fostering rational dialogue. \n> Author of 'The Programmer's Path with Java', a book that covers programming fundamentals and object-oriented principles. \n> In my free time you will find me reading books and scribing  through paper.`
+    const text = `> Hello, I'm Mohsin, a final-year Computer Science undergraduate student. \n> A Harvard-Certified Full Stack Web App Developer with Python and Django. \n> Currently immersed in writing research articles and developing applications in the realm of Artificial Intelligence and Machine Learning. \n> Founder of 'The Wise Sapiens' , a non-profit dedicated to STEM education and fostering rational dialogue. \n> Author of 'The Programmer's Path with Java', a book that covers programming fundamentals and object-oriented principles. \n> In my free time you will find me reading books and scribing  through paper.`
     let i = 0;
     const speed = 20;
   
@@ -84,11 +84,18 @@ counters.forEach(counter => {
   
     function toggleGitHubTheme(theme) {
       const statsImg = document.getElementById("github-stats-img");
-      if (statsImg) {
-        // statsImg.src = `https://github-readme-stats.vercel.app/api?username=mohsinwarind&show_icons=true&theme=${theme}`;
-        statsImg.src = `https://streak-stats.demolab.com/?user=mohsinwarind&theme=${theme}`;
+     if (statsImg) {
+    const url1 = `https://github-readme-stats.vercel.app/api?username=mohsinwarind&show_icons=true&theme=${theme}`;
+    const url2 = `https://streak-stats.demolab.com/?user=mohsinwarind&theme=${theme}`;
 
-      }
+    statsImg.src = url1;
+
+    statsImg.onerror = function () {
+        console.log("Primary image failed, switching to backup...");
+        this.onerror = null; // prevent infinite loop
+        this.src = url2;
+    };
+}
     }
   });
   
