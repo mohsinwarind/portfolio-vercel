@@ -15,6 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //  Project cards and data
   const projects = {
+
+    eyesonyou: {
+      title: "Eyes on You",
+      desc: "Eyes On You (version 1) is a real-time focus monitoring application built on top of the Pomodoro technique. Instead of just being a timer, it actively watches you through your webcam and intervenes when you get distracted or pick up your phone using a Guardian AI that generates personalized, context-aware messages to snap you back.",
+      img: STATIC_URL + "projects/images/eyesonyou.png",
+      github: "https://github.com/mohsinwarind/EyesOnYou",
+      demo: "https://eyesonyou.streamlit.app/",
+      
+    },
     
     ABC: {
       title: "Arabic Audio Classifier",
