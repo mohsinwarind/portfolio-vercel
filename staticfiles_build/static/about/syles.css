@@ -141,7 +141,10 @@
   
   /* Light Theme */
   body.light {
-    background-color: #f4f4f4;
+
+    background-color: #f4f4f4; /*  (this one is old which is more light*/
+   /* background-color: #e6e1dc; */
+ /* And this is far more reliable and cozy */
     color: #111;
   }
   body.light .terminal-text{
@@ -186,7 +189,8 @@
 
   body.light .footer {
     background-color: #f4f4f4;
-
+    
+   
     color: #111;
   }
   .footer-container {
@@ -320,8 +324,7 @@
   color: #1a1a1a; 
 } */
 
-/* Default (dark theme) selection */
-/* Dark theme */
+
 ::selection {
   background-color: rgba(0, 255, 153, 0.377);  /* soft green */
   color: #ffffff;
