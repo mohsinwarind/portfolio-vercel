@@ -24,9 +24,9 @@
     </div>
   </section>
 
-<!-- Section 2 -->
+<!-- Section 2  - Old One-->
 
-<section id="my-work" class="my-work-section">
+{% comment %} <section id="my-work" class="my-work-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-down">My Work</h2>
       <p class="section-subtitle" data-aos="fade-up">
@@ -80,7 +80,60 @@
         </a>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
+  
+
+  <section id="my-work" class="my-work-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">A few things I've been up to lately</h2>
+      <p class="section-subtitle" data-aos="fade-up">
+        _________________________________________________
+      </p>
+  
+      <div class="cat-work-grid">
+
+    <!-- Projects -->
+    <a href="{% url 'projects' %}" class="cat-work-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="cat-image-wrapper">
+            <img src="{% static 'about/cat-coding.png' %}" alt="Cat working on projects">
+        </div>
+
+        <div class="cat-work-info">
+            <h3>Projects</h3>
+            <p>Things I built for fun, work & curiosity.</p>
+        </div>
+    </a>
+
+
+    <!-- Publications -->
+    <a href="{% url 'publications' %}" class="cat-work-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="cat-image-wrapper">
+            <img src="{% static 'about/cat-reading.png' %}" alt="Cat reading a research paper">
+        </div>
+
+        <div class="cat-work-info">
+            <h3>Publications</h3>
+            <p>My scientific work & research.</p>
+        </div>
+    </a>
+
+
+    <!-- Extra Curricular -->
+    <a href="{% url 'extra' %}" class="cat-work-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="cat-image-wrapper">
+            <img src="{% static 'about/cat-extra.png' %}" alt="Cat exploring the world">
+        </div>
+
+        <div class="cat-work-info">
+            <h3>Extra-Curriculars</h3>
+            <p>Side quests, adventures & other endeavours.</p>
+        </div>
+    </a>
+
+</div>
+    </div>
+  </section> 
+
   
   <section class="highlights-section">
     <!-- Stats Row -->
