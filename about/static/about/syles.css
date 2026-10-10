@@ -52,6 +52,7 @@
   }
   .nav-links a:hover {
     color: #00ffcc;
+    text-decoration: underline;
   }
   
   /* Hamburger Icon */
